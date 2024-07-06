@@ -11,7 +11,7 @@ public class First_Largest{
     }
 
     static int Brute_Force(int[] arr){
-        Arrays.sort(arr);   // O(nlogn)
+        Arrays.sort(arr);   // O(n*log(n))
 
         return arr[arr.length-1];
     }
@@ -19,7 +19,7 @@ public class First_Largest{
     static int Optimal(int[] arr){
 
         int largest = arr[0];
-        for(int num : arr){
+        for(int num : arr){       // O(n)
             if(num > largest){
                 largest = num;
             }
