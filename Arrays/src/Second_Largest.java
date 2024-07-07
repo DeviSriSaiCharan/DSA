@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class Second_Largest {
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4,5,6,7,8,9,10,};
+        int[] arr = {1,2,3,4,5,6,7,8,9,10,10};
 
         System.out.println("--> Brute Force:");
         System.out.println("Second Larges: " + Brute_Force(arr));
@@ -17,7 +17,12 @@ public class Second_Largest {
     static int Brute_Force(int[] arr){
         Arrays.sort(arr);
 
-        return arr[arr.length - 2];
+        for(int i=arr.length-2 ; i>=0 ; i--){
+            if(arr[i] != arr[arr.length-1]){
+                return arr[i];
+            }
+        }
+        return -1;
     }
 
     static int Better(int[] arr){
