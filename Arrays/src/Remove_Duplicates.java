@@ -34,14 +34,14 @@ public class Remove_Duplicates {
         //replace i+1 with j
 
         int i=0;
-        for(int j=1 ; j<arr.length ; j++){
+        for(int j=1 ; j<arr.length ; j++){     // O(n)
             if(arr[i] == arr[j]) j++;
             else {
                 i++;
                 arr[i] = arr[j];
             }
         }
-
+                                 // S.C :- O(1)
         return i+1;
     }
 }
